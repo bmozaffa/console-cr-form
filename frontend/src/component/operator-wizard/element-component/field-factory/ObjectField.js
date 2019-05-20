@@ -195,7 +195,7 @@ export class ObjectField {
         } else {
           var parentjsonpath = this.props.fieldDef.jsonPath;
           var res = "";
-          //change the JsomPath before insert
+          //change the JsonPath before insert
           if (parentjsonpath.length < subfield.jsonPath.length) {
             res = subfield.jsonPath.substring(
               parentjsonpath.length,
@@ -324,6 +324,33 @@ export class ObjectField {
         }
       }
       field.fields = field.fields.concat(sampleObj);
+      // field.fields = field.fields.concat(
+      //   <FormGroup
+      //     fieldId={this.props.ids.fieldGroupId}
+      //     key={this.props.ids.fieldGroupKey}
+      //   />
+      // );
+      // var section = this.props.fieldDef.label + "section";
+      // field.fields = field.fields.concat(
+      //   <div
+      //     id={section}
+      //     key={section}
+      //     style={{
+      //       display:
+      //         this.props.fieldDef.visible !== undefined &&
+      //         this.props.fieldDef.visible !== false
+      //           ? "block"
+      //           : "none"
+      //     }}
+      //   >
+      //     <br />
+      //     <div style={{ fontWeight: "bold" }}>{this.props.fieldDef.label}</div>
+      //
+      //     <div className="pf-c-card">
+      //       <div className="pf-c-card__body">{sampleObj}</div>
+      //     </div>
+      //   </div>
+      // );
 
       if (parentFieldNumber == -1) {
         this.props.page.props.pageDef.fields[
